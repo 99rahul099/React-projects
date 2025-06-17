@@ -1,0 +1,235 @@
+.container {
+    font-family: 'Heebo', sans-serif;
+    background-color: #f5f7fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #21262c;
+}
+
+.form-section {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+}
+
+.card-preview {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-control {
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary {
+    background-color: #3498db;
+    border-color: #3498db;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+/* Business Card Styles */
+.front-side,
+.back-side {
+    width: 100%;
+    max-width: 500px;
+    height: 220px;
+    display: grid;
+    grid-template-columns: 2% 96% 2%;
+    grid-template-rows: 4% 92% 4%;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+    box-shadow: 2px 5px 15px rgba(23, 22, 22, 0.58);
+    background-color: #02272e;
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(8, 50px);
+    grid-gap: 8px;
+    width: 150px;
+    height: 400px;
+    transform: rotate(-45deg);
+}
+
+.black {
+    background-color: #343536;
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 3;
+}
+
+.red1 {
+    background-color: #476f95;
+    grid-row: 2 / span 5;
+}
+
+.red2 {
+    background-color: #7593af;
+    grid-column: 2 / span 2;
+    grid-row: 4/7;
+}
+
+.green {
+    background-color: #194a7a;
+    grid-column: 2/4;
+    grid-row: 7/9;
+}
+
+.info-grid {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.363);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.432);
+    border-radius: 6px;
+    font-size: 0.7rem;
+    display: grid;
+    grid-template-columns: 15px repeat(3, 1fr) 15px;
+    grid-template-rows: repeat(3, 1fr);
+    line-height: 1px;
+}
+
+.info-grid .name {
+    grid-column: 2 / span 2;
+    grid-row: 1 / span 1;
+    font-size: 1.2em;
+    letter-spacing: .1rem;
+    margin-top: 8px;
+}
+
+.info-grid .name h5 {
+    font-weight: normal;
+    color: #2c3e50;
+}
+
+.info-grid .addr {
+    width: 180px;
+    height: auto;
+    grid-column: 2/ span 2;
+    grid-row: 3;
+    line-height: 1.5;
+    white-space: normal;
+    word-wrap: break-word;
+    color: #2c3e50;
+}
+
+.info-grid .phoneNo {
+    grid-column: 3 / span 2;
+    grid-row: 2;
+    text-align: end;
+    color: #2c3e50;
+}
+
+.info-grid .emailId {
+    grid-column: 3 / span 2;
+    grid-row: 3;
+    text-align: end;
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+.back-side .name-tag {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: center;
+    z-index: 2;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.363);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.288);
+    font-size: 0.6rem;
+    letter-spacing: .1rem;
+    text-align: center;
+}
+
+.name-tag h1, .name-tag h3 {
+    margin: 2px;
+    font-weight: normal;
+    color: #2c3e50;
+}
+
+.download-btn {
+    width: 100%;
+    max-width: 200px;
+    margin: 20px auto;
+    display: block;
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .form-section, .card-preview {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .front-side, .back-side {
+        max-width: 400px;
+        height: 200px;
+    }
+    
+    .info-grid {
+        font-size: 0.6rem;
+    }
+    
+    .info-grid .name {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .front-side, .back-side {
+        max-width: 350px;
+        height: 180px;
+    }
+    
+    .info-grid {
+        grid-template-columns: 10px repeat(3, 1fr) 10px;
+    }
+    
+    .info-grid .addr {
+        width: 150px;
+    }
+}

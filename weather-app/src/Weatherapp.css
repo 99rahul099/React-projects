@@ -1,0 +1,178 @@
+/* Base reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #56ccf2, #2f80ed);
+    min-height: 100vh;
+  }
+  
+  /* Main container */
+  .main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Title */
+  .app-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Search section */
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+  
+  .search-container input {
+    padding: 15px;
+    width: 300px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .search-container .btn {
+    padding: 16px 25px;
+    background-color: rgb(255, 255, 255);
+    color: #2f80ed;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .search-container .btn:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Weather Info Section */
+  .weather-info {
+    background: #ffffff;
+    color: #333;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    margin-top: 15px;
+  }
+  
+  /* Location Info */
+  .location-info h2.city {
+    font-size: 1.8rem;
+    margin: 10px 0;
+  }
+  
+  .location-info p {
+    margin: 4px 0;
+    color: #555;
+  }
+  
+  /* Temperature and Condition */
+  .temperature-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .temperature-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #2f80ed;
+  }
+  
+  .unit {
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 5px;
+    color: #333;
+  }
+  
+  .condition {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .feels-like {
+    font-size: 1rem;
+    margin-top: 5px;
+    color: #666;
+  }
+  
+  /* Weather Icon */
+  .weather-icon {
+    margin-top: 10px;
+  }
+  
+  /* Weather Details Grid */
+  .weather-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .detail-item {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .detail-item span {
+    display: block;
+    margin-top: 4px;
+  }
+  
+  .detail-value {
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 1rem;
+  }
+  
+  /* Snackbar override */
+  .MuiAlert-filledError {
+    background-color: #d32f2f !important;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .temperature {
+      font-size: 2.4rem;
+    }
+  
+    .weather-details {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .search-container {
+      flex-direction: column;
+    }
+  
+    .search-container input {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .btn {
+      width: 100%;
+      max-width: 150px;
+    }
+  }
+  
